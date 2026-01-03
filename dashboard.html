@@ -1,0 +1,46 @@
+<!-- dashboard.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dashboard - Makanan Bergizi Gratis</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/dashboard.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Navbar Background -->
+  <div class="navbar-bg"></div>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="nav-left">
+      <img src="img/logo.png" class="logo" width="30px">
+      <span class="instansi">BADAN GIZI NASIONAL</span>
+    </div>
+    <div class="nav-center">
+      <a href="#" class="nav-link">Informasi</a>
+      <a href="tracking.html" class="nav-link">Tracking</a>
+      <a href="stok.html" class="nav-link">Stok</a>
+    </div>
+    <div class="nav-right">
+      <span id="welcomeText"></span>
+      <button class="logout-btn">Logout</button>
+    </div>
+  </nav>
+
+  <div class="slide" id="slide1">
+    <div class="slide-bg"></div>
+    <div class="marquee">
+      <span>DEMI BANGSA</span>
+    </div>
+    <div class="slide-fg"></div>
+    <div class="slide-blue-overlay"></div>
+    <div class="cards-overlay" id="statCards"></div>
+  </div>
+
+  <script src="js/data.js"></script>
+  <script src="js/dashboard.js"></script>
+</body>
+</html>

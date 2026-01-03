@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Makanan Bergizi Gratis (MBG)</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat  :wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Navbar Background (efek exclusion) -->
+  <div class="navbar-bg"></div>
+  
+  <!-- Navbar Konten -->
+  <nav class="navbar">
+    <div class="nav-left">
+      <img src="img/logo.png" class="logo" width="30px">
+      <span class="instansi">BADAN GIZI NASIONAL</span>
+    </div>
+    <div class="nav-center">
+      <a href="#" class="nav-link require-login">Informasi</a>
+      <a href="#" class="nav-link require-login">Tracking</a>
+      <a href="#" class="nav-link require-login">Stok</a>
+    </div>
+    <div class="nav-right">
+      <button class="login-btn">Login</button>
+    </div>
+  </nav>
+
+  <!-- Login Modal -->
+  <div id="loginModal" class="modal">
+    <div class="modal-overlay"></div>
+    <div class="modal-content">
+      <div class="modal-left">
+        <div class="modal-logo-container">
+          <img src="img/logo.png" alt="Logo" class="modal-logo">
+          <h2>BADAN GIZI NASIONAL</h2>
+        </div>
+        <form id="loginForm">
+          <input type="text" id="nickname" placeholder="Nickname" required>
+          <input type="password" id="password" placeholder="Password" required>
+          <p class="terms">
+            Dengan masuk, Anda menyetujui 
+            <a href="#" class="terms-link">Ketentuan Layanan</a> dan 
+            <a href="#" class="terms-link">Kebijakan Privasi</a> kami.
+          </p>
+          <button type="submit" class="modal-login-btn">Login</button>
+        </form>
+      </div>
+      <div class="modal-right">
+        <img src="img/loginBG.png" alt="Login Background">
+      </div>
+    </div>
+  </div>
+
+  <div class="scroll-container">
+    <!-- Slide 1 -->
+    <section class="slide" id="slide1">
+      <div class="slide-bg"></div>
+      <div class="marquee">
+        <span>DEMI BANGSA</span>
+      </div>
+      <div class="slide-fg"></div>
+      <div class="slide-blue-overlay"></div>
+      <div class="slide-text-bottom-left">
+        Memastikan kebutuhan gizi harian masyarakat, terutama anak-anak sekolah, balita, ibu hamil, dan ibu menyusui, terpenuhi sesuai Angka Kecukupan Gizi (AKG).
+      </div>
+    </section>
+
+    <!-- Slide 2 -->
+    <section class="slide" id="slide2">
+      <div class="slide2-content">
+        <div class="slide2-image">
+          <img src="img/presiden.png" alt="Presiden Indonesia">
+        </div>
+        <div class="slide2-quote">
+          <p>“ Rencana besar yang kita beri nama Strategi Transformasi Bangsa. Inti daripada strategi ini tentunya adalah meningkatkan kemakmuran bangsa Indonesia dan terutama memperbaiki kualitas hidup manusia Indonesia, seluruh rakyat Indonesia. ”</p>
+          <p>“ Salah satu proyek strategis kita adalah memberi makan bergizi untuk seluruh anak-anak Indonesia, termasuk yang masih dalam kandungan ibunya dan akan diberikan sampai sekolah dasar hingga sekolah menengah atas. “</p>
+          <div class="quote-author">— Prabowo Subianto</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Slide 3 -->
+    <section class="slide" id="slide3">
+      <div class="slide3-bg"></div>
+      <div class="slide3-color-overlay"></div>
+      <div class="slide3-blue-overlay"></div>
+
+      <div class="slide3-top-content">
+        <div class="slide3-images-grid">
+          <img src="img/logo-sekolah1.png" alt="Lembaga Pendidikan 1">
+          <img src="img/logo-sekolah2.png" alt="Lembaga Pendidikan 2">
+          <img src="img/logo-sekolah3.png" alt="Lembaga Pendidikan 3">
+        </div>
+        <div class="slide3-tagline">
+          Telah Berkontribusi Lebih Dari 10.000 Lembaga Pendidikan
+        </div>
+      </div>
+
+      <footer class="slide3-footer">
+        <div class="footer-content">
+          <div class="footer-logo-section">
+            <div class="footer-logo">MBG</div>
+            <p>Makanan Bergizi Gratis<br>Untuk Generasi Emas Indonesia</p>
+          </div>
+          <div class="footer-links">
+            <div class="footer-col">
+              <h4>Program</h4>
+              <ul>
+                <li><a href="#">Anak Sekolah</a></li>
+                <li><a href="#">Balita</a></li>
+                <li><a href="#">Ibu Hamil & Menyusui</a></li>
+                <li><a href="#">Penyaluran Lokal</a></li>
+              </ul>
+            </div>
+            <div class="footer-col">
+              <h4>Informasi</h4>
+              <ul>
+                <li><a href="#">Tentang Kami</a></li>
+                <li><a href="#">Laporan Tahunan</a></li>
+                <li><a href="#">Transparansi Dana</a></li>
+                <li><a href="#">FAQ</a></li>
+              </ul>
+            </div>
+            <div class="footer-col">
+              <h4>Kontak</h4>
+              <ul>
+                <li>📞 (021) 1234-5678</li>
+                <li>✉️ info@mbg.go.id</li>
+                <li>📍 Jakarta, Indonesia</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          &copy; 2026 Makanan Bergizi Gratis – by Taqi 25510020
+        </div>
+      </footer>
+    </section>
+  </div>
+
+  <!-- Load data & script -->
+  <script src="js/data.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>

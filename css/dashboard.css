@@ -1,0 +1,85 @@
+/* dashboard.css */
+body {
+    overflow: hidden;
+    height: 100vh;
+  }
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+#welcomeText {
+    color: white;
+    font-weight: 600;
+    font-size: 0.95rem;
+}
+
+.logout-btn {
+    background: transparent;
+    border: 1px solid white;
+    color: white;
+    border-radius: 5px;
+    padding: 0.4rem 1rem;
+    font-weight: 600;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: opacity 0.2s;
+}
+
+.logout-btn:hover {
+    opacity: 0.8;
+}
+
+.cards-overlay {
+    position: absolute;
+    bottom: calc(5vw);
+    left: calc(5vw);
+    right: calc(5vw);
+    height: 15vh;
+    display: flex;
+    gap: 15px;
+    z-index: 10;
+}
+
+.stat-card {
+    background: white;
+    border-radius: 10px;
+    flex: 1;
+    display: flex;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.card-icon {
+    width: 33.33%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f0f4ff;
+}
+
+.card-icon img {
+    width: 60%;
+    height: auto;
+}
+
+.card-content {
+    width: 66.66%;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.card-title {
+    font-weight: 700;
+    font-size: 1rem;
+    color: #061D42;
+    margin-bottom: 0.25rem;
+}
+
+.card-info {
+    font-size: 0.9rem;
+    color: #555;
+}

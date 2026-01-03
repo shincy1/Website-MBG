@@ -1,0 +1,212 @@
+body {
+  overflow: hidden;
+  height: 100vh;
+}
+
+.tracking-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('../img/background.png') center/cover no-repeat;
+  z-index: 1;
+}
+
+.tracking-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #061D42;
+  opacity: 0.9;
+  z-index: 2;
+}
+
+.tracking-card {
+  position: absolute;
+  top: calc(3rem + 5vh);
+  left: 5vw;
+  right: 5vw;
+  bottom: 5vh;
+  background: white;
+  border-radius: 10px;
+  padding: 15px;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+}
+
+.search-container {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+#searchInput {
+  flex: 1;
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  background: white;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+}
+
+.search-btn {
+  background-color: #061D42;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 12px 20px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.search-btn:hover {
+  background-color: #041530;
+}
+
+.tracking-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 10px 0;
+  overflow-y: auto;
+  text-align: center;
+}
+
+.tracking-content img {
+  height: 50vh;
+  width: auto;
+}
+
+.tracking-content p {
+  color: #555;
+  font-size: 1rem;
+  font-weight: 500;
+  margin-top: 16px;
+  padding: 0 10px;
+}
+
+/* TABLE STYLING */
+.tracking-table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+  padding: 0 5px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 5px;
+}
+
+thead th {
+  background-color: #061D42;
+  color: white;
+  padding: 12px 10px;
+  text-align: left;
+  font-weight: 600;
+}
+
+thead th:first-child {
+  border-top-left-radius: 10px;
+}
+
+thead th:last-child {
+  border-top-right-radius: 10px;
+}
+
+tbody td {
+  background: white;
+  border: 1px solid #ddd;
+  padding: 10px;
+  font-size: 0.95rem;
+}
+
+tbody tr:last-child td:first-child {
+  border-bottom-left-radius: 10px;
+}
+
+tbody tr:last-child td:last-child {
+  border-bottom-right-radius: 10px;
+}
+
+.status-badges {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.badge {
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: white;
+}
+
+.badge.kirim {
+  background-color: #3498db;
+}
+
+.badge.bayar {
+  background-color: #2ecc71;
+}
+
+/* PAGINATION */
+.pagination {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 8px;
+  padding-top: 12px;
+  border-top: 1px solid #eee;
+}
+
+.pagination.hidden {
+  display: none !important;
+}
+
+.page-btn {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 1px solid #ccc;
+  background: white;
+  color: #333;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: all 0.2s;
+}
+
+.page-btn.active {
+  background: #061D42;
+  color: white;
+  border-color: #061D42;
+}
+
+.page-btn:hover:not(.active) {
+  background: #f0f0f0;
+}
+
+.page-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  background: white;
+  color: #999;
+  border-color: #ccc;
+}

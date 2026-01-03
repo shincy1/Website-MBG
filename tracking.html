@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tracking - Makanan Bergizi Gratis</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/tracking.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Navbar Background -->
+  <div class="navbar-bg"></div>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="nav-left">
+      <img src="img/logo.png" class="logo" width="30px">
+      <span class="instansi">BADAN GIZI NASIONAL</span>
+    </div>
+    <div class="nav-center">
+      <a href="dashboard.html" class="nav-link">Informasi</a>
+      <a href="tracking.html" class="nav-link active">Tracking</a>
+      <a href="stok.html" class="nav-link">Stok</a>
+    </div>
+    <div class="nav-right">
+      <span id="welcomeText"></span>
+      <button class="logout-btn">Logout</button>
+    </div>
+  </nav>
+
+  <!-- Background & Overlay -->
+  <div class="tracking-bg"></div>
+  <div class="tracking-overlay"></div>
+
+  <!-- Main Card -->
+  <div class="tracking-card">
+    <div class="search-container">
+      <input type="text" id="searchInput" placeholder="Cari data..." />
+      <button id="searchButton" class="search-btn">Cari</button>
+    </div>
+
+    <div id="trackingContent" class="tracking-content"></div>
+
+    <div id="pagination" class="pagination"></div>
+  </div>
+
+  <!-- External Scripts (di akhir body) -->
+  <script src="js/data.js"></script>
+  <script src="js/tracking.js"></script>
+</body>
+</html>

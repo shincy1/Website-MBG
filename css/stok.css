@@ -1,0 +1,394 @@
+/* ===== STOK PAGE ===== */
+
+body {
+    margin: 0;
+    height: 100vh;
+    overflow: hidden;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.stok-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background: url('../img/background.png') center / cover no-repeat;
+}
+
+.stok-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    background-color: #061d42;
+    opacity: 0.9;
+}
+
+.stok-card {
+    position: absolute;
+    top: calc(3rem + 5vh);
+    left: 5vw;
+    right: 5vw;
+    bottom: 5vh;
+    z-index: 10;
+    display: flex;
+    gap: 24px;
+    padding: 20px;
+    overflow: hidden;
+    background: white;
+    border-radius: 10px;
+}
+
+.stok-left,
+.stok-right {
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.search-container {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+#searchInput {
+    flex: 1;
+    padding: 12px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background: white;
+}
+
+.search-btn {
+    padding: 12px 20px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 10px;
+    background-color: #061d42;
+    color: white;
+    cursor: pointer;
+}
+
+.stok-table-wrapper {
+    flex: 1;
+    padding: 0 5px;
+    overflow-y: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+thead th {
+    padding: 12px 10px;
+    text-align: left;
+    font-weight: 600;
+    color: white;
+    background-color: #061d42;
+}
+
+thead th:first-child {
+    border-top-left-radius: 10px;
+}
+
+thead th:last-child {
+    border-top-right-radius: 10px;
+}
+
+tbody td {
+    padding: 12px 10px;
+    font-size: 0.95rem;
+    border-bottom: 1px solid #eee;
+}
+
+tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.action-cell {
+    display: flex;
+    gap: 8px;
+}
+
+.action-btn {
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #ccc;
+    border-radius: 50%;
+    background: white;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.action-btn.edit {
+    color: #edc900;
+    border-color: #edc900;
+}
+
+.action-btn.edit:hover {
+    background: #fff9e6;
+}
+
+.action-btn.delete {
+    color: #e74c3c;
+    border-color: #e74c3c;
+}
+
+.action-btn.delete:hover {
+    background: #ffe6e6;
+}
+
+.stok-right {
+    justify-content: center;
+    align-items: center;
+}
+
+.form-container {
+    width: 100%;
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.form-grid {
+    display: flex;
+    gap: 20px;
+}
+
+.form-column-left,
+.form-column-right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.form-group label {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #333;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 12px;
+    font-size: 0.95rem;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background: white;
+    box-sizing: border-box;
+}
+
+#inputDeskripsi {
+    width: 100%;
+    height: 130px;
+    padding: 12px;
+    font-size: 0.95rem;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background: white;
+    resize: vertical;
+    box-sizing: border-box;
+}
+
+.status-row {
+    display: flex;
+    gap: 10px;
+}
+
+.form-buttons {
+    display: flex;
+    gap: 12px;
+}
+
+.btn-primary,
+.btn-secondary {
+    flex: 1;
+    padding: 12px;
+    font-weight: 600;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.btn-primary {
+    background-color: #061d42;
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: #041530;
+}
+
+.btn-secondary {
+    background-color: #6c757d;
+    color: white;
+}
+
+.btn-secondary:hover {
+    background-color: #5a6268;
+}
+
+.pagination {
+    display: flex;
+    gap: 8px;
+    padding-top: 12px;
+    border-top: 1px solid #eee;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.pagination.hidden {
+    display: none !important;
+}
+
+.page-btn {
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #ccc;
+    border-radius: 50%;
+    background: white;
+    color: #333;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.page-btn.active {
+    background: #061d42;
+    color: white;
+    border-color: #061d42;
+}
+
+.page-btn:hover:not(.active):not(:disabled) {
+    background: #f0f0f0;
+}
+
+.page-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    background: white;
+    color: #999;
+    border-color: #ccc;
+}
+
+.stok-table-wrapper::-webkit-scrollbar {
+    width: 6px;
+}
+
+.stok-table-wrapper::-webkit-scrollbar-thumb {
+    background: #ccc;
+    border-radius: 3px;
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    opacity: 0;
+    visibility: hidden;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.3s, visibility 0.3s;
+}
+
+.modal.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal-content-small {
+    width: 90%;
+    max-width: 400px;
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    transform: scale(0.9);
+    transition: transform 0.3s ease;
+}
+
+.modal.show .modal-content-small {
+    transform: scale(1);
+}
+
+.modal-header {
+    padding: 16px 20px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: white;
+    background-color: #061d42;
+}
+
+.modal-body {
+    padding: 20px;
+    font-size: 1rem;
+    color: #333;
+    text-align: center;
+}
+
+.modal-footer {
+    padding: 16px 20px;
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end;
+    background-color: #f9f9f9;
+}
+
+.btn-modal-primary,
+.btn-modal-secondary {
+    padding: 8px 16px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.btn-modal-primary {
+    background-color: #061d42;
+    color: white;
+}
+
+.btn-modal-primary:hover {
+    background-color: #041530;
+}
+
+.btn-modal-secondary {
+    background-color: #6c757d;
+    color: white;
+}
+
+.btn-modal-secondary:hover {
+    background-color: #5a6268;
+}

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Stok - Makanan Bergizi Gratis</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/stok.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat  :wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css  " />
+</head>
+<body>
+  <!-- Navbar Background -->
+  <div class="navbar-bg"></div>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="nav-left">
+      <img src="img/logo.png" class="logo" width="30px">
+      <span class="instansi">BADAN GIZI NASIONAL</span>
+    </div>
+    <div class="nav-center">
+      <a href="dashboard.html" class="nav-link">Informasi</a>
+      <a href="tracking.html" class="nav-link">Tracking</a>
+      <a href="stok.html" class="nav-link active">Stok</a>
+    </div>
+    <div class="nav-right">
+      <span id="welcomeText"></span>
+      <button class="logout-btn">Logout</button>
+    </div>
+  </nav>
+
+  <!-- Background & Overlay -->
+  <div class="stok-bg"></div>
+  <div class="stok-overlay"></div>
+
+  <!-- Main Card -->
+  <div class="stok-card">
+    <!-- Bagian Kiri: Tabel, Search, Pagination -->
+    <div class="stok-left">
+      <div class="search-container">
+        <input type="text" id="searchInput" placeholder="Cari data..." />
+        <button id="searchButton" class="search-btn">Cari</button>
+      </div>
+
+      <div class="stok-table-wrapper">
+        <table>
+          <thead>
+            <tr>
+              <th>Kode</th>
+              <th>Penerima</th>
+              <th>Aksi</th>
+            </tr>
+          </thead>
+          <tbody id="stokTableBody">
+          </tbody>
+        </table>
+      </div>
+
+      <div id="pagination" class="pagination"></div>
+    </div>
+
+    <!-- Bagian Kanan: Form -->
+    <div class="stok-right">
+      <div class="form-container">
+        <div class="form-grid">
+          <div class="form-column-left">
+            <div class="form-group">
+              <label for="inputKode">Kode</label>
+              <input type="text" id="inputKode" />
+            </div>
+            <div class="form-group">
+              <label for="inputKurir">Kurir</label>
+              <input type="text" id="inputKurir" />
+            </div>
+            <div class="form-group">
+              <label>Status</label>
+              <div class="status-row">
+                <select id="statusBayar">
+                  <option value="">Pilih Status Bayar</option>
+                </select>
+                <select id="statusKirim">
+                  <option value="">Pilih Status Kirim</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="inputPorsi">Porsi</label>
+              <input type="number" id="inputPorsi" min="1" />
+            </div>
+          </div>
+
+          <div class="form-column-right">
+            <div class="form-group">
+              <label for="inputPenerima">Penerima</label>
+              <input type="text" id="inputPenerima" />
+            </div>
+            <div class="form-group">
+              <label for="inputMenu">Menu</label>
+              <select id="inputMenu">
+                <option value="">Pilih Menu</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="inputDeskripsi">Deskripsi</label>
+              <textarea id="inputDeskripsi"></textarea>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-buttons">
+          <button id="btnSimpan" class="btn-primary">Simpan</button>
+          <button id="btnTambah" class="btn-secondary">Tambah</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal Konfirmasi Hapus -->
+<div id="confirmModal" class="modal">
+    <div class="modal-overlay" id="modalOverlay"></div>
+    <div class="modal-content-small">
+      <div class="modal-header">
+        <h3>Konfirmasi</h3>
+      </div>
+      <div class="modal-body">
+        <p id="modalMessage">Apakah Anda yakin ingin menghapus data ini?</p>
+      </div>
+      <div class="modal-footer">
+        <button id="modalCancel" class="btn-modal-secondary">Batal</button>
+        <button id="modalConfirm" class="btn-modal-primary">Ya, Hapus</button>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Modal Notifikasi (untuk error form) -->
+  <div id="notificationModal" class="modal">
+    <div class="modal-overlay" id="notificationOverlay"></div>
+    <div class="modal-content-small">
+      <div class="modal-header">
+        <h3>Peringatan</h3>
+      </div>
+      <div class="modal-body">
+        <p id="notificationMessage">Pesan notifikasi.</p>
+      </div>
+      <div class="modal-footer">
+        <button id="notificationClose" class="btn-modal-primary">OK</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/data.js"></script>
+  <script src="js/stok.js"></script>
+</body>
+</html>
