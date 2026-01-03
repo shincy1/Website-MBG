@@ -62,7 +62,7 @@
 
     if (query === '') {
       trackingContent.innerHTML = `
-        <img src="img/maskot.png" alt="Maskot">
+        <img src="img/maskot.webp" alt="Maskot">
         <p>Cari Data Yang diinginkan dengan menggunakan kolom pencarian di atas ya</p>
       `;
       paginationEl.classList.add('hidden');
@@ -71,7 +71,7 @@
 
     if (filteredData.length === 0) {
       trackingContent.innerHTML = `
-        <img src="img/maskot.png" alt="Maskot">
+        <img src="img/maskot.webp" alt="Maskot">
         <p>Tidak ada data yang ditemukan.</p>
       `;
       paginationEl.classList.add('hidden');
