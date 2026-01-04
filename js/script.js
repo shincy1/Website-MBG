@@ -127,4 +127,17 @@
             }, 300);
         }, 3000);
     }
+
+    // Mobile
+    document.getElementById('hamburgerBtn')?.addEventListener('click', () => {
+        document.getElementById('mobileSidebar')?.classList.add('active');
+    });
+
+    document.getElementById('closeSidebar')?.addEventListener('click', () => {
+        document.getElementById('mobileSidebar')?.classList.remove('active');
+    });
+
+    if (document.querySelector('.login-btn-mobile')) {
+        document.querySelector('.login-btn-mobile').addEventListener('click', openModal);
+    }
 })();

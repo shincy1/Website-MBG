@@ -1,54 +1,53 @@
-/* ===== STOK PAGE ===== */
-
 body {
     margin: 0;
-    height: 100vh;
-    overflow: hidden;
     font-family: 'Montserrat', sans-serif;
 }
 
 .stok-bg {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
+    background: url('../img/background.webp') center/cover no-repeat;
     z-index: 1;
-    background: url('../img/background.webp') center / cover no-repeat;
 }
 
 .stok-overlay {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: 2;
-    background-color: #061d42;
+    background-color: #061D42;
     opacity: 0.9;
+    z-index: 2;
+}
+
+.stok-container {
+    padding-top: calc(3rem + 20px);
+    padding-left: 5vw;
+    padding-right: 5vw;
+    padding-bottom: 20px;
+    min-height: 100vh;
+    position: relative;
+    z-index: 10;
 }
 
 .stok-card {
-    position: absolute;
-    top: calc(3rem + 5vh);
-    left: 5vw;
-    right: 5vw;
-    bottom: 5vh;
-    z-index: 10;
-    display: flex;
-    gap: 24px;
-    padding: 20px;
-    overflow: hidden;
     background: white;
     border-radius: 10px;
+    padding: 20px;
+    display: flex;
+    gap: 24px;
 }
 
 .stok-left,
 .stok-right {
     flex: 1;
-    min-width: 0;
     display: flex;
     flex-direction: column;
+    overflow-y: auto;
 }
 
 .search-container {
@@ -148,11 +147,6 @@ tbody tr:last-child td {
 
 .action-btn.delete:hover {
     background: #ffe6e6;
-}
-
-.stok-right {
-    justify-content: center;
-    align-items: center;
 }
 
 .form-container {
@@ -297,15 +291,6 @@ tbody tr:last-child td {
     border-color: #ccc;
 }
 
-.stok-table-wrapper::-webkit-scrollbar {
-    width: 6px;
-}
-
-.stok-table-wrapper::-webkit-scrollbar-thumb {
-    background: #ccc;
-    border-radius: 3px;
-}
-
 .modal {
     position: fixed;
     top: 0;
@@ -391,4 +376,51 @@ tbody tr:last-child td {
 
 .btn-modal-secondary:hover {
     background-color: #5a6268;
+}
+
+@media (max-width: 768px) {
+    .stok-container {
+        padding-top: calc(3rem + 15px);
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .stok-card {
+        flex-direction: column;
+        padding: 15px;
+    }
+
+    .stok-left,
+    .stok-right {
+        width: 100%;
+    }
+
+    .form-grid {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .form-buttons {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .form-buttons button {
+        width: 100%;
+    }
+
+    table {
+        font-size: 0.85rem;
+    }
+
+    th,
+    td {
+        padding: 8px 6px;
+    }
+
+    .action-cell .action-btn {
+        width: 32px;
+        height: 32px;
+        font-size: 0.9rem;
+    }
 }

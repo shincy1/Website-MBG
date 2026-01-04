@@ -1,4 +1,3 @@
-<!-- dashboard.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,17 +9,15 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 </head>
 <body>
-  <!-- Navbar Background -->
+  <!-- Desktop Navbar -->
   <div class="navbar-bg"></div>
-
-  <!-- Navbar -->
   <nav class="navbar">
     <div class="nav-left">
       <img src="img/logo.webp" class="logo" width="30px">
       <span class="instansi">BADAN GIZI NASIONAL</span>
     </div>
     <div class="nav-center">
-      <a href="#" class="nav-link">Informasi</a>
+      <a href="dashboard.html" class="nav-link">Informasi</a>
       <a href="tracking.html" class="nav-link">Tracking</a>
       <a href="stok.html" class="nav-link">Stok</a>
     </div>
@@ -29,6 +26,36 @@
       <button class="logout-btn">Logout</button>
     </div>
   </nav>
+
+  <!-- Mobile Navbar -->
+  <nav class="navbar-mobile">
+    <div class="nav-left">
+      <div class="hamburger" id="hamburgerBtn">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <img src="img/logo.webp" class="logo" width="30px">
+    </div>
+  </nav>
+
+  <!-- Mobile Sidebar -->
+  <div class="mobile-sidebar" id="mobileSidebar">
+    <div class="sidebar-header">
+      <img src="img/logo.webp" class="logo" width="30px">
+      <span class="instansi">BADAN GIZI NASIONAL</span>
+      <button class="close-sidebar" id="closeSidebar">&times;</button>
+    </div>
+    <ul class="sidebar-nav">
+      <li><a href="dashboard.html" class="nav-link">Informasi</a></li>
+      <li><a href="tracking.html" class="nav-link">Tracking</a></li>
+      <li><a href="stok.html" class="nav-link">Stok</a></li>
+    </ul>
+    <div class="sidebar-footer">
+      <span id="mobileWelcomeText"></span>
+      <button class="logout-btn" id="mobileLogout">Logout</button>
+    </div>
+  </div>
 
   <div class="slide" id="slide1">
     <div class="slide-bg"></div>

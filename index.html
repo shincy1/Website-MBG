@@ -4,14 +4,18 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Makanan Bergizi Gratis (MBG)</title>
+  <style>
+    html, body {
+      height: 100%;
+      overflow: hidden;
+    }
+  </style>
   <link rel="stylesheet" href="css/style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat  :wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 </head>
 <body>
-  <!-- Navbar Background (efek exclusion) -->
+  <!-- Navbar hanya untuk desktop -->
   <div class="navbar-bg"></div>
-  
-  <!-- Navbar Konten -->
   <nav class="navbar">
     <div class="nav-left">
       <img src="img/logo.webp" class="logo" width="30px">
@@ -26,6 +30,29 @@
       <button class="login-btn">Login</button>
     </div>
   </nav>
+
+  <!-- Mobile Hamburger + Sidebar -->
+  <nav class="navbar-mobile">
+    <div class="nav-left">
+      <div class="hamburger" id="hamburgerBtn">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <img src="img/logo.webp" class="logo" width="30px">
+    </div>
+  </nav>
+
+  <div class="mobile-sidebar" id="mobileSidebar">
+    <div class="sidebar-header">
+      <img src="img/logo.webp" class="logo" width="30px">
+      <span class="instansi">BADAN GIZI NASIONAL</span>
+      <button class="close-sidebar" id="closeSidebar">&times;</button>
+    </div>
+    <ul class="sidebar-nav">
+      <li><button class="login-btn login-btn-mobile">Login</button></li>
+    </ul>
+  </div>
 
   <!-- Login Modal -->
   <div id="loginModal" class="modal">
@@ -47,7 +74,7 @@
           <button type="submit" class="modal-login-btn">Login</button>
         </form>
       </div>
-      <div class="modal-right">
+      <div class="modal-right" id="loginBGContainer">
         <img src="img/loginBG.webp" alt="Login Background">
       </div>
     </div>
@@ -140,7 +167,6 @@
     </section>
   </div>
 
-  <!-- Load data & script -->
   <script src="js/data.js"></script>
   <script src="js/script.js"></script>
 </body>

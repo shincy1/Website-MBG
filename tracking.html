@@ -1,18 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Tracking - Makanan Bergizi Gratis</title>
   <link rel="stylesheet" href="css/style.css" />
   <link rel="stylesheet" href="css/tracking.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
 </head>
-<body>
-  <!-- Navbar Background -->
-  <div class="navbar-bg"></div>
 
-  <!-- Navbar -->
+<body>
+  <!-- Desktop Navbar -->
+  <div class="navbar-bg"></div>
   <nav class="navbar">
     <div class="nav-left">
       <img src="img/logo.webp" class="logo" width="30px">
@@ -28,6 +29,34 @@
       <button class="logout-btn">Logout</button>
     </div>
   </nav>
+
+  <nav class="navbar-mobile">
+    <div class="nav-left">
+      <div class="hamburger" id="hamburgerBtn">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <img src="img/logo.webp" class="logo" width="30px">
+    </div>
+  </nav>
+
+  <div class="mobile-sidebar" id="mobileSidebar">
+    <div class="sidebar-header">
+      <img src="img/logo.webp" class="logo" width="30px">
+      <span class="instansi">BADAN GIZI NASIONAL</span>
+      <button class="close-sidebar" id="closeSidebar">&times;</button>
+    </div>
+    <ul class="sidebar-nav">
+      <li><a href="dashboard.html" class="nav-link">Informasi</a></li>
+      <li><a href="tracking.html" class="nav-link active">Tracking</a></li>
+      <li><a href="stok.html" class="nav-link">Stok</a></li>
+    </ul>
+    <div class="sidebar-footer">
+      <span id="mobileWelcomeText"></span>
+      <button class="logout-btn" id="mobileLogout">Logout</button>
+    </div>
+  </div>
 
   <!-- Background & Overlay -->
   <div class="tracking-bg"></div>
@@ -45,8 +74,9 @@
     <div id="pagination" class="pagination"></div>
   </div>
 
-  <!-- External Scripts (di akhir body) -->
+  <!-- External Scripts -->
   <script src="js/data.js"></script>
   <script src="js/tracking.js"></script>
 </body>
+
 </html>

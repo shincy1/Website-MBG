@@ -45,4 +45,22 @@
         localStorage.removeItem('nickname');
         window.location.href = 'index.html';
     });
+
+    // Mobile
+    document.getElementById('hamburgerBtn')?.addEventListener('click', () => {
+        document.getElementById('mobileSidebar')?.classList.add('active');
+    });
+
+    document.getElementById('closeSidebar')?.addEventListener('click', () => {
+        document.getElementById('mobileSidebar')?.classList.remove('active');
+    });
+
+    if (document.getElementById('mobileWelcomeText')) {
+        document.getElementById('mobileWelcomeText').textContent = `Selamat Datang, ${nickname}`;
+    }
+
+    document.getElementById('mobileLogout')?.addEventListener('click', () => {
+        localStorage.clear();
+        window.location.href = 'index.html';
+    });
 })();

@@ -6,14 +6,12 @@
   <title>Stok - Makanan Bergizi Gratis</title>
   <link rel="stylesheet" href="css/style.css" />
   <link rel="stylesheet" href="css/stok.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat  :wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css  " />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 </head>
 <body>
-  <!-- Navbar Background -->
+  <!-- Desktop Navbar -->
   <div class="navbar-bg"></div>
-
-  <!-- Navbar -->
   <nav class="navbar">
     <div class="nav-left">
       <img src="img/logo.webp" class="logo" width="30px">
@@ -30,13 +28,41 @@
     </div>
   </nav>
 
-  <!-- Background & Overlay -->
+  <!-- Mobile Navbar -->
+  <nav class="navbar-mobile">
+    <div class="nav-left">
+      <div class="hamburger" id="hamburgerBtn">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <img src="img/logo.webp" class="logo" width="30px">
+    </div>
+  </nav>
+
+  <!-- Mobile Sidebar -->
+  <div class="mobile-sidebar" id="mobileSidebar">
+    <div class="sidebar-header">
+      <img src="img/logo.webp" class="logo" width="30px">
+      <span class="instansi">BADAN GIZI NASIONAL</span>
+      <button class="close-sidebar" id="closeSidebar">&times;</button>
+    </div>
+    <ul class="sidebar-nav">
+      <li><a href="dashboard.html" class="nav-link">Informasi</a></li>
+      <li><a href="tracking.html" class="nav-link">Tracking</a></li>
+      <li><a href="stok.html" class="nav-link">Stok</a></li>
+    </ul>
+    <div class="sidebar-footer">
+      <span id="mobileWelcomeText"></span>
+      <button class="logout-btn" id="mobileLogout">Logout</button>
+    </div>
+  </div>
+
   <div class="stok-bg"></div>
   <div class="stok-overlay"></div>
 
-  <!-- Main Card -->
+  <div class="stok-container">
   <div class="stok-card">
-    <!-- Bagian Kiri: Tabel, Search, Pagination -->
     <div class="stok-left">
       <div class="search-container">
         <input type="text" id="searchInput" placeholder="Cari data..." />
@@ -52,15 +78,13 @@
               <th>Aksi</th>
             </tr>
           </thead>
-          <tbody id="stokTableBody">
-          </tbody>
+          <tbody id="stokTableBody"></tbody>
         </table>
       </div>
 
       <div id="pagination" class="pagination"></div>
     </div>
 
-    <!-- Bagian Kanan: Form -->
     <div class="stok-right">
       <div class="form-container">
         <div class="form-grid">
@@ -115,9 +139,10 @@
       </div>
     </div>
   </div>
+  </div>
 
   <!-- Modal Konfirmasi Hapus -->
-<div id="confirmModal" class="modal">
+  <div id="confirmModal" class="modal">
     <div class="modal-overlay" id="modalOverlay"></div>
     <div class="modal-content-small">
       <div class="modal-header">
@@ -133,7 +158,7 @@
     </div>
   </div>
   
-  <!-- Modal Notifikasi (untuk error form) -->
+  <!-- Modal Notifikasi -->
   <div id="notificationModal" class="modal">
     <div class="modal-overlay" id="notificationOverlay"></div>
     <div class="modal-content-small">
