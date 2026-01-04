@@ -139,16 +139,7 @@ body {
     align-items: center;
     justify-content: space-between;
     padding: 0 10%;
-}
-
-.slide2-image,
-.slide2-quote {
-    width: 40%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    gap: 2rem;
 }
 
 .slide2-image img {
@@ -179,20 +170,6 @@ body {
     font-weight: 700;
     margin-top: 1rem;
     color: #f1c40f;
-}
-
-@media (max-width: 768px) {
-    .slide2-content {
-        flex-direction: column;
-        padding: 2rem 1rem;
-        gap: 2rem;
-    }
-
-    .slide2-image img {
-        height: auto;
-        max-height: 40vh;
-        width: auto;
-    }
 }
 
 #slide3 {
@@ -359,7 +336,7 @@ body {
         top: 1.5rem;
         left: 50%;
         transform: translateX(-50%);
-        width: calc(10, 100% - 4rem);
+        width: calc(100% - 4rem);
         max-width: 1200px;
         height: 52px;
         align-items: center;
@@ -532,6 +509,108 @@ body {
 
     .login-btn-mobile:hover {
         background-color: #ccc;
+    }
+
+    .slide2-content {
+        flex-direction: column;
+        padding: 1.2rem 0.8rem;
+        gap: 1.4rem;
+        height: auto;
+        justify-content: flex-start;
+        align-items: center;
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .slide2-image img {
+        height: auto;
+        max-height: 40vh;
+        width: 92%;
+        margin: 0 auto;
+        border-radius: 8px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+    }
+
+    .slide2-quote {
+        width: 100%;
+        padding: 0 1rem;
+        text-align: center;
+        display: block;
+    }
+
+    .slide2-quote p {
+        font-size: clamp(0.95rem, 3.8vmin, 1.2rem);
+        line-height: 1.55;
+        margin-bottom: 1.2rem;
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+        padding: 0;
+        max-width: none;
+        display: none;
+    }
+
+    .slide2-quote p:nth-of-type(2) {
+        display: block !important;
+    }
+
+    .quote-author {
+        font-size: clamp(0.9rem, 2.4vmin, 1.05rem);
+        font-weight: 700;
+        margin-top: 0.8rem;
+        color: #f1c40f;
+        width: 100%;
+        text-align: center;
+        padding: 0 1rem;
+    }
+
+    #slide3 .footer-content {
+        flex-direction: column;
+        gap: 1.2rem;
+        text-align: center;
+    }
+
+    #slide3 .footer-links {
+        flex-direction: column;
+        gap: 1.2rem;
+        align-items: center;
+    }
+
+    #slide3 .footer-col {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #slide3 .footer-col h4 {
+        font-size: 1rem;
+        margin-bottom: 0.7rem;
+        color: #061D42;
+    }
+
+    #slide3 .footer-col ul li {
+        font-size: 0.875rem;
+        margin-bottom: 0.5rem;
+        text-align: center;
+    }
+
+    #slide3 .footer-logo-section .footer-logo {
+        font-size: 1.8rem;
+    }
+
+    #slide3 .footer-logo-section p {
+        font-size: 0.85rem;
+        text-align: center;
+    }
+
+    /* Jamin copyright tidak tersembunyi */
+    #slide3 .footer-bottom {
+        display: block !important;
+        font-size: 0.8rem;
+        padding-top: 1rem;
+        border-top: 1px solid #eee;
+        color: #666;
+        text-align: center;
     }
 }
 
