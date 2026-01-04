@@ -138,6 +138,14 @@
     });
 
     if (document.querySelector('.login-btn-mobile')) {
-        document.querySelector('.login-btn-mobile').addEventListener('click', openModal);
+        document.querySelector('.login-btn-mobile').addEventListener('click', () => {
+            // Tutup sidebar terlebih dahulu
+            const mobileSidebar = document.getElementById('mobileSidebar');
+            if (mobileSidebar) {
+                mobileSidebar.classList.remove('active');
+            }
+            // Baru tampilkan modal
+            openModal();
+        });
     }
 })();
